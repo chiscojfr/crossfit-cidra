@@ -29,7 +29,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
           {/* Logo */}
           <a href="#inicio" className="flex items-center space-x-3">
             <img
-              src="/images/logo-white.png"
+              src={`${import.meta.env.BASE_URL}images/logo-white.png`}
               alt="CrossFit Cidra"
               className="h-12 w-auto"
             />
