@@ -32,8 +32,8 @@ const Contact = () => {
         </svg>
       ),
       title: 'WhatsApp',
-      value: '+1 (787) 777-7777',
-      link: 'https://wa.me/17877777777',
+      value: '+1 (787) 210-5147',
+      link: 'https://wa.me/17872105147',
       color: 'bg-green-600 hover:bg-green-700',
     },
     {

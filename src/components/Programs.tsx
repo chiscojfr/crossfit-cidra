@@ -3,50 +3,52 @@ import { motion } from 'framer-motion'
 const Programs = () => {
   const plans = [
     {
-      name: 'Básico',
-      price: '$79',
-      period: '/mes',
+      name: 'Ilimitado',
+      price: 'Ver Precio',
+      period: '',
+      description: 'La mejor opción para resultados máximos',
+      features: [
+        'Clases ilimitadas por 4 semanas',
+        'Acceso completo a instalaciones',
+        'Entrenadores certificados',
+        'Programación personalizada',
+        'Comunidad de apoyo',
+        'Eventos especiales',
+      ],
+      popular: true,
+      link: 'https://xwausy.pushpress.com/landing/plans/plan_ac6876811c7f4d',
+    },
+    {
+      name: '12 Clases',
+      price: 'Ver Precio',
+      period: '',
       description: 'Perfecto para comenzar tu viaje fitness',
       features: [
-        '8 clases al mes',
+        '12 clases por 4 semanas',
         'Acceso a instalaciones',
         'Entrenadores certificados',
         'Comunidad de apoyo',
         'Evaluación inicial',
+        'Flexibilidad de horarios',
       ],
       popular: false,
+      link: 'https://xwausy.pushpress.com/landing/plans/plan_00d3aac4797e48',
     },
     {
-      name: 'Ilimitado',
-      price: '$129',
-      period: '/mes',
-      description: 'La mejor opción para resultados máximos',
+      name: 'Plan Familiar',
+      price: 'Ver Precio',
+      period: '',
+      description: 'Entrena con toda tu familia',
       features: [
-        'Clases ilimitadas',
+        'Plan para toda la familia',
+        'Clases por 4 semanas',
         'Acceso completo a instalaciones',
         'Entrenadores certificados',
-        'Programación personalizada',
-        'Evaluación mensual',
-        'Nutrición básica',
-        'Eventos especiales',
-      ],
-      popular: true,
-    },
-    {
-      name: 'Personal',
-      price: '$199',
-      period: '/mes',
-      description: 'Atención personalizada uno a uno',
-      features: [
-        'Clases ilimitadas',
-        '4 sesiones personales/mes',
-        'Plan de nutrición completo',
-        'Programación personalizada',
-        'Evaluaciones semanales',
-        'Acceso prioritario',
-        'Soporte 24/7',
+        'Programación adaptada',
+        'Descuento familiar',
       ],
       popular: false,
+      link: 'https://xwausy.pushpress.com/landing/plans/plan_1004613afad547',
     },
   ]
 
@@ -121,18 +123,101 @@ const Programs = () => {
               </ul>
 
               <a
-                href="#contacto"
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block text-center py-4 rounded-lg font-bold transition-all duration-200 transform hover:scale-105 ${
                   plan.popular
                     ? 'bg-primary hover:bg-primary-dark text-white'
                     : 'bg-dark-lighter hover:bg-gray-800 text-white border-2 border-gray-700'
                 }`}
               >
-                Comenzar Ahora
+                Inscribirse Ahora
               </a>
             </motion.div>
           ))}
         </div>
+
+        {/* Additional Plans */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl font-bold text-center mb-8">
+            Otros <span className="text-primary">Planes</span>
+          </h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                name: 'First Responder y Estudiantes',
+                description: 'Plan especial para primeros respondedores y estudiantes',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_d047ed7eb07f4a',
+              },
+              {
+                name: 'Open Gym Ilimitado',
+                description: 'Acceso ilimitado al gimnasio por 4 semanas',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_c09529a8621d4f',
+              },
+              {
+                name: 'Entrenamiento Personal',
+                description: 'Sesiones personalizadas uno a uno',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_1cddf6d9799443',
+              },
+              {
+                name: 'Drop-in Day Pass',
+                description: 'Pase de un día para visitantes',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_4vbfqheh0exoe5',
+              },
+              {
+                name: '1 Semana',
+                description: 'Plan de prueba por una semana',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_c037c58d10f24f',
+              },
+              {
+                name: 'Especial 3 Meses',
+                description: 'Compromiso de 3 meses con descuento',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_4fc82c11b2c34c',
+              },
+              {
+                name: 'Especial 6 Meses',
+                description: 'Compromiso de 6 meses con mayor descuento',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_7b75ae5881ff4e',
+              },
+              {
+                name: 'Especial 12 Meses',
+                description: 'Compromiso anual con el mejor precio',
+                link: 'https://xwausy.pushpress.com/landing/plans/plan_d191e3f4d76a44',
+              },
+            ].map((plan, index) => (
+              <motion.a
+                key={index}
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-dark p-6 rounded-xl border border-gray-800 hover:border-primary transition-all duration-300 group"
+              >
+                <h4 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {plan.name}
+                </h4>
+                <p className="text-gray-400 mb-4">{plan.description}</p>
+                <div className="flex items-center text-primary font-semibold">
+                  Ver Detalles
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

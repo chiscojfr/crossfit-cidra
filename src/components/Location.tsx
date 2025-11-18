@@ -29,7 +29,7 @@ const Location = () => {
             className="relative h-96 lg:h-full min-h-[400px] rounded-2xl overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8!2d-66.1614!3d18.1757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDEwJzMyLjUiTiA2NsKwMDknNDEuMCJX!5e0!3m2!1sen!2spr!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d-66.1614!3d18.1757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f2f1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2sCrossFit%20Cidra!5e0!3m2!1sen!2spr!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -67,7 +67,7 @@ const Location = () => {
               </div>
 
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=18.1757,-66.1614"
+                href="https://maps.app.goo.gl/xXB5PwLqPak9FCZE6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
@@ -101,18 +101,22 @@ const Location = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-4">Horario de Clases</h3>
-                  <div className="space-y-2 text-gray-300">
-                    <div className="flex justify-between">
-                      <span>Lunes - Viernes:</span>
-                      <span className="font-semibold">5:00 AM - 9:00 PM</span>
+                  <div className="space-y-3 text-gray-300">
+                    <div>
+                      <div className="font-semibold text-white mb-2">Lunes - Viernes:</div>
+                      <div className="text-sm space-y-1 ml-4">
+                        <div>5:00 AM - 6:00 AM</div>
+                        <div>6:00 AM - 7:00 AM</div>
+                        <div>7:00 AM - 8:00 AM</div>
+                        <div>8:00 AM - 9:00 AM</div>
+                        <div className="mt-2">4:30 PM - 5:30 PM</div>
+                        <div>5:30 PM - 6:30 PM</div>
+                        <div>6:30 PM - 7:30 PM</div>
+                      </div>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Sábados:</span>
-                      <span className="font-semibold">7:00 AM - 2:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Domingos:</span>
-                      <span className="font-semibold">8:00 AM - 12:00 PM</span>
+                    <div>
+                      <div className="font-semibold text-white mb-2">Sábado:</div>
+                      <div className="text-sm ml-4">8:00 AM - 12:00 PM</div>
                     </div>
                   </div>
                 </div>

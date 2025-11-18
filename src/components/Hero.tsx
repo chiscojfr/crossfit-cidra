@@ -16,11 +16,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="mb-6"
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white">
-              CROSSFIT
-              <span className="block text-primary mt-2">CIDRA</span>
-            </h1>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo-white.png`}
+              alt="CrossFit Cidra"
+              className="h-32 md:h-48 lg:h-56 w-auto mx-auto"
+            />
           </motion.div>
 
           <motion.p
@@ -48,7 +50,7 @@ const Hero = () => {
               Comienza Hoy
             </a>
             <a
-              href="https://wa.me/17877777777"
+              href="https://wa.me/17872105147"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto"
@@ -65,7 +67,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto"
+            className="grid grid-cols-3 gap-8 mt-16 mb-20 max-w-3xl mx-auto"
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-black text-primary mb-2">500+</div>
