@@ -55,7 +55,7 @@ const Contact = () => {
       ),
       title: 'Facebook',
       value: 'CrossFit Cidra',
-      link: 'https://facebook.com/crossfitcidra',
+      link: 'https://www.facebook.com/share/1BAFP5cFFU/?mibextid=wwXIfr',
       color: 'bg-blue-600 hover:bg-blue-700',
     },
     {

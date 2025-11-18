@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <img
-              src="/images/logo-white.png"
+              src={`${import.meta.env.BASE_URL}images/logo-white.png`}
               alt="CrossFit Cidra"
               className="h-16 w-auto mb-4"
             />
@@ -50,7 +50,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Síguenos</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com/crossfitcidra"
+                href="https://www.facebook.com/share/1BAFP5cFFU/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark hover:bg-primary rounded-full flex items-center justify-center transition-colors"
@@ -72,7 +72,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://wa.me/17877777777"
+                href="https://wa.me/17872105147"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark hover:bg-primary rounded-full flex items-center justify-center transition-colors"
