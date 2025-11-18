@@ -89,6 +89,37 @@ const Contact = () => {
           </p>
         </motion.div>
 
+        {/* Interested Form CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 max-w-4xl mx-auto"
+        >
+          <a
+            href="https://xwausy.pushpress.com/open/interested"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-gradient-to-r from-primary to-red-700 p-8 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-[1.02] border-2 border-primary"
+          >
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
+                ¿Interesado en Unirte?
+              </h3>
+              <p className="text-lg md:text-xl text-white/90 mb-4">
+                Completa nuestro formulario de interés y nos pondremos en contacto contigo
+              </p>
+              <div className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                Completar Formulario
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div

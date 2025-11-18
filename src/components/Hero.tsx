@@ -44,7 +44,9 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="#contacto"
+              href="https://xwausy.pushpress.com/open/interested"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
               Comienza Hoy
