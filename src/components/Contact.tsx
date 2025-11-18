@@ -1,29 +1,6 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would integrate with your backend or email service
-    console.log('Form submitted:', formData)
-    alert('¡Gracias por tu interés! Te contactaremos pronto.')
-    setFormData({ name: '', email: '', phone: '', message: '' })
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   const contactMethods = [
     {
       icon: (
@@ -120,134 +97,32 @@ const Contact = () => {
           </a>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Nombre Completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-dark-lighter border border-gray-800 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Tu nombre"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-dark-lighter border border-gray-800 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                  placeholder="tu@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Teléfono
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-dark-lighter border border-gray-800 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                  placeholder="(787) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 bg-dark-lighter border border-gray-800 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Cuéntanos sobre tus objetivos..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-lg font-bold text-lg transition-all duration-200 transform hover:scale-105"
+        {/* Contact Methods */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="grid md:grid-cols-2 gap-6">
+            {contactMethods.map((method, index) => (
+              <a
+                key={index}
+                href={method.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-4 p-6 rounded-xl ${method.color} transition-all duration-200 transform hover:scale-105 shadow-lg`}
               >
-                Enviar Mensaje
-              </button>
-            </form>
-          </motion.div>
-
-          {/* Contact Methods */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <div className="bg-dark-lighter p-8 rounded-xl border border-gray-800">
-              <h3 className="text-2xl font-bold mb-6">Otras Formas de Contacto</h3>
-              <div className="space-y-4">
-                {contactMethods.map((method, index) => (
-                  <a
-                    key={index}
-                    href={method.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-4 p-4 rounded-lg ${method.color} transition-all duration-200 transform hover:scale-105`}
-                  >
-                    <div className="text-white">{method.icon}</div>
-                    <div>
-                      <div className="font-semibold text-white">{method.title}</div>
-                      <div className="text-sm text-white/80">{method.value}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-dark-lighter p-8 rounded-xl border border-gray-800">
-              <h3 className="text-2xl font-bold mb-4">Horario</h3>
-              <div className="space-y-2 text-gray-300">
-                <div className="flex justify-between">
-                  <span>Lunes - Viernes:</span>
-                  <span className="font-semibold">5:00 AM - 9:00 PM</span>
+                <div className="text-white">{method.icon}</div>
+                <div>
+                  <div className="font-semibold text-white text-lg">{method.title}</div>
+                  <div className="text-sm text-white/90">{method.value}</div>
                 </div>
-                <div className="flex justify-between">
-                  <span>Sábados:</span>
-                  <span className="font-semibold">7:00 AM - 2:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Domingos:</span>
-                  <span className="font-semibold">8:00 AM - 12:00 PM</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+              </a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )
