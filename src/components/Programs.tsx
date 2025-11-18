@@ -112,7 +112,7 @@ const Programs = () => {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 md:px-0">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -122,7 +122,7 @@ const Programs = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`relative bg-dark rounded-2xl p-8 border-2 ${
                 plan.popular
-                  ? 'border-primary shadow-2xl shadow-primary/20 transform scale-105'
+                  ? 'border-primary shadow-2xl shadow-primary/20 md:transform md:scale-105'
                   : 'border-gray-800'
               }`}
             >

@@ -21,7 +21,7 @@ const Hero = () => {
             <img
               src={`${import.meta.env.BASE_URL}images/logo-white.png`}
               alt="CrossFit Cidra"
-              className="h-32 md:h-48 lg:h-56 w-auto mx-auto"
+              className="h-48 md:h-64 lg:h-80 w-auto mx-auto"
             />
           </motion.div>
 
@@ -67,7 +67,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-3 gap-8 mt-16 mb-20 max-w-3xl mx-auto"
+            className="grid grid-cols-3 gap-4 md:gap-8 mt-16 mb-20 max-w-3xl mx-auto px-4"
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-black text-primary mb-2">500+</div>
