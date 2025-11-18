@@ -70,6 +70,48 @@ const Programs = () => {
           </p>
         </motion.div>
 
+        {/* Free Trial Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
+          <a
+            href="https://xwausy.pushpress.com/landing/plans/plan_f24c409cc4e545"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-gradient-to-r from-primary to-red-700 p-8 md:p-12 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-[1.02] border-2 border-primary"
+          >
+            <div className="text-center">
+              <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm uppercase mb-4">
+                ¡Oferta Especial!
+              </div>
+              <h3 className="text-3xl md:text-5xl font-black text-white mb-4">
+                Primera Semana GRATIS
+              </h3>
+              <p className="text-xl md:text-2xl text-white/90 mb-6">
+                Prueba Gratuita de 3 Clases
+              </p>
+              <div className="flex items-center justify-center gap-3 text-white/90 mb-6">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Sin compromiso</span>
+                <span className="text-white/50">•</span>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Sin tarjeta de crédito</span>
+              </div>
+              <div className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                Comenzar Prueba Gratis →
+              </div>
+            </div>
+          </a>
+        </motion.div>
+
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div

@@ -59,7 +59,7 @@ const Location = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Dirección</h3>
                   <p className="text-gray-300">
-                    Carr. 172 Km 1.5<br />
+                    18 Cll Miguel Planellas<br />
                     Cidra, PR 00739<br />
                     Puerto Rico
                   </p>
@@ -85,8 +85,8 @@ const Location = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Teléfono</h3>
-                  <a href="tel:+17877777777" className="text-gray-300 hover:text-primary transition-colors">
-                    (787) 777-7777
+                  <a href="tel:+17872105147" className="text-gray-300 hover:text-primary transition-colors">
+                    (787) 210-5147
                   </a>
                 </div>
               </div>
