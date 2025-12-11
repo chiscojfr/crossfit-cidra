@@ -29,6 +29,34 @@ const Gallery = () => {
       url: `${import.meta.env.BASE_URL}box-images/IMG_5734.PNG`,
       alt: 'Nuestro Box',
     },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5747.jpg`,
+      alt: 'Entrenamiento CrossFit',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5758.jpg`,
+      alt: 'Atletas de CrossFit Cidra',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5765.jpg`,
+      alt: 'Sesión de Entrenamiento',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5770.jpg`,
+      alt: 'Comunidad en Acción',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5782.jpg`,
+      alt: 'Entrenamiento de Fuerza',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5786.jpg`,
+      alt: 'CrossFit Cidra Box',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5804.jpg`,
+      alt: 'Clase de CrossFit',
+    },
   ]
 
   const videos = [
