@@ -6,44 +6,44 @@ const Gallery = () => {
 
   const photos = [
     {
-      url: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070',
-      alt: 'CrossFit Training',
+      url: `${import.meta.env.BASE_URL}box-images/20f31088-0675-4117-8a24-556761862982.jpg`,
+      alt: 'CrossFit Cidra',
     },
     {
-      url: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070',
-      alt: 'Group Class',
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5730.PNG`,
+      alt: 'Entrenamiento en CrossFit Cidra',
     },
     {
-      url: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070',
-      alt: 'Weightlifting',
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5731.PNG`,
+      alt: 'Clase Grupal',
     },
     {
-      url: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070',
-      alt: 'Box Jump',
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5732.PNG`,
+      alt: 'Comunidad CrossFit Cidra',
     },
     {
-      url: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069',
-      alt: 'Kettlebell Training',
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5733.PNG`,
+      alt: 'Entrenamiento Funcional',
     },
     {
-      url: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=2069',
-      alt: 'Community',
+      url: `${import.meta.env.BASE_URL}box-images/IMG_5734.PNG`,
+      alt: 'Nuestro Box',
     },
   ]
 
   const videos = [
     {
-      thumbnail: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070',
+      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5730.PNG`,
       title: 'Clase de CrossFit',
       url: '#',
     },
     {
-      thumbnail: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070',
+      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5731.PNG`,
       title: 'Testimonios de Miembros',
       url: '#',
     },
     {
-      thumbnail: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070',
+      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5732.PNG`,
       title: 'Tour del Box',
       url: '#',
     },

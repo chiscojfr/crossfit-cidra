@@ -5,7 +5,7 @@ import WhatIsCrossFit from './components/WhatIsCrossFit'
 import Benefits from './components/Benefits'
 import Programs from './components/Programs'
 import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
+// import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Location from './components/Location'
 import Footer from './components/Footer'
@@ -30,7 +30,7 @@ function App() {
         <Benefits />
         <Programs />
         <Gallery />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
         <Location />
       </main>
