@@ -14,7 +14,6 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     { href: '#beneficios', label: 'Beneficios' },
     { href: '#planes', label: 'Planes' },
     { href: '#galeria', label: 'Galería' },
-    { href: '#testimonios', label: 'Testimonios' },
     { href: '#contacto', label: 'Contacto' },
   ]
 
