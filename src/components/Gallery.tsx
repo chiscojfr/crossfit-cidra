@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
 const Gallery = () => {
-  const [activeTab, setActiveTab] = useState<'photos' | 'videos'>('photos')
 
   const photos = [
     {
@@ -57,25 +55,42 @@ const Gallery = () => {
       url: `${import.meta.env.BASE_URL}box-images/IMG_5804.jpg`,
       alt: 'Clase de CrossFit',
     },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/facilities/WhatsApp Image 2025-12-22 at 11.56.36 AM.jpeg`,
+      alt: 'Instalaciones CrossFit Cidra',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/facilities/WhatsApp Image 2025-12-22 at 11.56.36 AM (1).jpeg`,
+      alt: 'Nuestras Instalaciones',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/facilities/WhatsApp Image 2025-12-22 at 11.56.36 AM (2).jpeg`,
+      alt: 'Área de Entrenamiento',
+    },
+    {
+      url: `${import.meta.env.BASE_URL}box-images/facilities/WhatsApp Image 2025-12-22 at 11.56.36 AM (3).jpeg`,
+      alt: 'Equipamiento del Box',
+    },
   ]
 
-  const videos = [
-    {
-      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5730.PNG`,
-      title: 'Clase de CrossFit',
-      url: '#',
-    },
-    {
-      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5731.PNG`,
-      title: 'Testimonios de Miembros',
-      url: '#',
-    },
-    {
-      thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5732.PNG`,
-      title: 'Tour del Box',
-      url: '#',
-    },
-  ]
+  // Videos section hidden for future deployment
+  // const videos = [
+  //   {
+  //     thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5730.PNG`,
+  //     title: 'Clase de CrossFit',
+  //     url: '#',
+  //   },
+  //   {
+  //     thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5731.PNG`,
+  //     title: 'Testimonios de Miembros',
+  //     url: '#',
+  //   },
+  //   {
+  //     thumbnail: `${import.meta.env.BASE_URL}box-images/IMG_5732.PNG`,
+  //     title: 'Tour del Box',
+  //     url: '#',
+  //   },
+  // ]
 
   return (
     <section id="galeria" className="py-20 md:py-32 bg-dark">
@@ -90,38 +105,13 @@ const Gallery = () => {
           <h2 className="font-display text-4xl md:text-6xl font-black mb-6">
             <span className="text-primary">Galería</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Mira nuestra comunidad en acción
           </p>
-
-          {/* Tabs */}
-          <div className="flex justify-center gap-4">
-            <button
-              onClick={() => setActiveTab('photos')}
-              className={`px-8 py-3 rounded-lg font-bold transition-all duration-200 ${
-                activeTab === 'photos'
-                  ? 'bg-primary text-white'
-                  : 'bg-dark-lighter text-gray-400 hover:text-white'
-              }`}
-            >
-              Fotos
-            </button>
-            <button
-              onClick={() => setActiveTab('videos')}
-              className={`px-8 py-3 rounded-lg font-bold transition-all duration-200 ${
-                activeTab === 'videos'
-                  ? 'bg-primary text-white'
-                  : 'bg-dark-lighter text-gray-400 hover:text-white'
-              }`}
-            >
-              Videos
-            </button>
-          </div>
         </motion.div>
 
         {/* Photos Grid */}
-        {activeTab === 'photos' && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {photos.map((photo, index) => (
               <motion.div
                 key={index}
@@ -141,11 +131,10 @@ const Gallery = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
-        )}
+        </div>
 
-        {/* Videos Grid */}
-        {activeTab === 'videos' && (
+        {/* Videos Grid - Hidden for future deployment */}
+        {/* {activeTab === 'videos' && (
           <div className="grid md:grid-cols-3 gap-6">
             {videos.map((video, index) => (
               <motion.a
@@ -175,7 +164,7 @@ const Gallery = () => {
               </motion.a>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )
