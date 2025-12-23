@@ -121,12 +121,12 @@ const Gallery = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer"
+                className="group relative overflow-hidden rounded-xl cursor-pointer"
               >
                 <img
                   src={photo.url}
                   alt={photo.alt}
-                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <p className="text-white font-semibold">{photo.alt}</p>
