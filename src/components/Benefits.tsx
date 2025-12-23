@@ -19,7 +19,7 @@ const Benefits = () => {
     },
     {
       title: 'Resultados Reales',
-      description: 'Transformaciones visibles en semanas, no meses',
+      description: 'Tranforma tu salud, cuerpo y mente',
       icon: '📈',
     },
     {
