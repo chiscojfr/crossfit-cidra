@@ -69,12 +69,8 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-3 gap-4 md:gap-8 mt-16 mb-20 max-w-3xl mx-auto px-4"
+            className="grid grid-cols-2 gap-4 md:gap-8 mt-16 mb-20 max-w-2xl mx-auto px-4"
           >
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2">500+</div>
-              <div className="text-sm md:text-base text-gray-400 uppercase tracking-wide">Miembros</div>
-            </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-black text-primary mb-2">10+</div>
               <div className="text-sm md:text-base text-gray-400 uppercase tracking-wide">Años</div>

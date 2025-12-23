@@ -35,17 +35,18 @@ const Contact = () => {
       link: 'https://www.facebook.com/share/1BAFP5cFFU/?mibextid=wwXIfr',
       color: 'bg-blue-600 hover:bg-blue-700',
     },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: 'Email',
-      value: 'info@crossfitcidra.com',
-      link: 'mailto:info@crossfitcidra.com',
-      color: 'bg-gray-700 hover:bg-gray-600',
-    },
+    // Email hidden per user request
+    // {
+    //   icon: (
+    //     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    //     </svg>
+    //   ),
+    //   title: 'Email',
+    //   value: 'info@crossfitcidra.com',
+    //   link: 'mailto:info@crossfitcidra.com',
+    //   color: 'bg-gray-700 hover:bg-gray-600',
+    // },
   ]
 
   return (
@@ -105,7 +106,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {contactMethods.map((method, index) => (
               <a
                 key={index}
