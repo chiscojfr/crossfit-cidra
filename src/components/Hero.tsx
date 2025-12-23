@@ -83,12 +83,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Hidden on mobile, visible on desktop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <a href="#que-es-crossfit" className="flex flex-col items-center text-white/60 hover:text-white transition-colors">
           <span className="text-sm mb-2 uppercase tracking-wider">Descubre más</span>
